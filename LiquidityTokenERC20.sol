@@ -11,9 +11,6 @@ contract LiquidityTokenERC20 is IERC20 {
     mapping(address => uint) public balanceOf;
     mapping(address => mapping(address => uint)) public allowance;
 
-    event Approval(address indexed owner, address indexed spender, uint value);
-    event Transfer(address indexed from, address indexed to, uint value);
-
     function _mint(address to, uint value) internal {
         totalSupply = totalSupply + value;
         balanceOf[to] = balanceOf[to] + value;
