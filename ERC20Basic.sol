@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
+import 'hardhat/console.sol';
 
 interface IERC20 {
 
@@ -69,8 +70,8 @@ contract ERC20Basic is IERC20 {
     }
 
     function transferFrom(address owner, address buyer, uint256 numTokens) public override returns (bool) {
-        require(numTokens <= balances[owner]);
-        require(numTokens <= allowed[owner][msg.sender]);
+        require(numTokens <= balances[owner], 'Owner of tokens does not have sufficient token balance');
+        require(numTokens <= allowed[owner][msg.sender], 'Owner of tokens has not approved sender specified token amount to transfer');
 
         balances[owner] = balances[owner]-numTokens;
         allowed[owner][msg.sender] = allowed[owner][msg.sender]-numTokens;
