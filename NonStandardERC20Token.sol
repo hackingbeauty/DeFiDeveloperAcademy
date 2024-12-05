@@ -7,7 +7,7 @@ pragma solidity >=0.8.0 <0.9.0;
 contract NonStandardERC20Token {
     address private owner;
 
-    string public constant name = "MyToken";
+    string public constant name = "NonStandardERC20Token";
 
     uint256 private totalSupply;
 
