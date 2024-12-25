@@ -33,3 +33,10 @@ async function main() {
 
   console.log('--- Deployed Contract address: ', nonStandardERC20Token.target)
 }
+
+main()
+  .then(() => process.exit(0))
+  .catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });
