@@ -1,9 +1,9 @@
-// SPDX-License-Identifer: MIT
+// SPDX-License-Identifier: MIT
 pragma solidity=0.8.28;
 
 interface ITradingPair {
     function initialize(address, address) external;
-    function getReserves() external view returns(uint112 _reserve0, uint112 _reserve1, uint32 _blockTimestampLast);
+    function getReserves() external view returns(uint112 _reserve0, uint112 _reserve1);
     function mint(address to) external returns (uint liquidity);
     function burn(address to) external returns (uint amount0, uint amount1);
     function approve(address spender, uint value) external returns (bool);

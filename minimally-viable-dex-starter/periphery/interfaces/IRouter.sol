@@ -1,8 +1,8 @@
-// SPDX-License-Identifer: MIT
+// SPDX-License-Identifier: MIT
 pragma solidity=0.8.28;
 
 interface IRouter {
-    function factoryAddr() external view returns (address);
+    function factory() external view returns (address);
     function WETH() external view returns (address);
     function depositLiquidity(
         address tokenA,
