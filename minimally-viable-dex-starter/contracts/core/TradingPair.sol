@@ -15,7 +15,7 @@ contract TradingPair is ITradingPair, LiquidityTokenERC20 {
     uint public constant MINIMUM_LIQUIDITY = 10**3;
     bytes4 private constant SELECTOR = bytes4(keccak256(bytes('transfer(address,uint256)')));
 
-    address public factoryAddr;
+    address public factory;
     address public token0;
     address public token1;
 
@@ -44,11 +44,11 @@ contract TradingPair is ITradingPair, LiquidityTokenERC20 {
     }
 
     constructor() {
-        factoryAddr = msg.sender;
+        factory = msg.sender;
     }
 
     function initialize(address _token0, address _token1) external {
-        require(msg.sender == factoryAddr, 'DEX: FORBIDDEN');
+        require(msg.sender == factory, 'DEX: FORBIDDEN');
         token0 = _token0;
         token1 = _token1;
     }
@@ -73,25 +73,20 @@ contract TradingPair is ITradingPair, LiquidityTokenERC20 {
     }
 
     function _mintFee(uint112 _reserve0, uint112 _reserve1) private returns (bool feeOn) {
-        address feeTo = IFactory(factoryAddr).feeTo();
+       address feeTo = IFactory(factory).feeTo();
         feeOn = feeTo != address(0);
-
         uint _kLast = kLast; // gas savings
-
-        if(feeOn) {
-            if(_kLast != 0) {
-                uint rootK = Math.sqrt(Math.mul(_reserve0, _reserve1));
+        if (feeOn) {
+            if (_kLast != 0) {
+                uint rootK = Math.sqrt(uint(_reserve0).mul(_reserve1));
                 uint rootKLast = Math.sqrt(_kLast);
-
-                if(rootK > rootKLast) {
-                    uint numerator = totalSupply * (rootK - rootKLast);
-                    uint denominator = (rootK * 5) + rootKLast;
+                if (rootK > rootKLast) {
+                    uint numerator = totalSupply.mul(rootK.sub(rootKLast));
+                    uint denominator = rootK.mul(5).add(rootKLast);
                     uint liquidity = numerator / denominator;
-                    if(liquidity > 0) _mint(feeTo, liquidity);
+                    if (liquidity > 0) _mint(feeTo, liquidity);
                 }
             }
-        } else if (_kLast != 0){
-            kLast = 0;
         }
     }
 
