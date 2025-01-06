@@ -1,0 +1,24 @@
+{ 
+    "inputs": [
+        {
+        "internalType": "address",
+        "name": "factoryAddr",
+        "type": "address"
+        },
+        {
+        "internalType": "address",
+        "name": "tokenA",
+        "type": "address"
+        },
+        {
+        "internalType": "address",
+        "name": "tokenB",
+        "type": "address"
+        }
+    ],
+    "name": "pairFor",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "pure",
+    "type": "function"
+}
