@@ -80,18 +80,13 @@ describe("TradingPairExchange contract", ()=> {
             tradingPairExchange
         }
     }
+    
+    describe("Minting Liquidity Tokens", () =>{
+        it("should remit payment of the protocol fee to the exchange developer account", async() => {});
 
-    describe("Exchanging Assets", () => {
+        it("should update a Liquidity Provider's account after a deposit into a new pool", async() => {});
 
-        it("should prevent against reentrancy", async() => {
-
-        });
-
-        it("should allow a flash swap/loan", async() => {
-
-        });
-        
-
+        it("should update a Liquidity Provider's account after a deposit into an existing pool", async() => {});
     });
-
+    
 });
