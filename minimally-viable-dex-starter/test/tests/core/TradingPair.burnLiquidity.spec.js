@@ -2,7 +2,7 @@ const { expect } = require("chai");
 const { loadFixture } = require("@nomicfoundation/hardhat-network-helpers");
 const { ethers, network } = require("hardhat");
 
-describe("TradingPairExchange contract", ()=> {
+describe("TradingPair contract", ()=> {
     async function deployTradingPairExchangeFixture() {
         await network.provider.send("hardhat_reset");
 

@@ -44,7 +44,7 @@ describe("Router contract", ()=> {
             const currentTime = Math.floor(Date.now() / 1000); //divide by 1000 to get seconds
             const deadline = currentTime + (20 * 60); //deadline is current time + 20 minutes
             
-            /* Step 3a - Deploy Trading Pair Exchanges */
+            /* Step 3a - Deploy TradingPair exchanges */
             await deployExchanges({
                 factory,
                 deployedContracts,
