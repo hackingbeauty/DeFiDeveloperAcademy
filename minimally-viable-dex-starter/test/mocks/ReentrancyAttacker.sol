@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
 
-import '../../contracts/core/interfaces/ITradingPairExchange.sol';
+import '../../contracts/core/interfaces/ITradingPair.sol';
 import '../../contracts/core/interfaces/IERC20.sol';
 
 contract ReentrancyAttacker {
@@ -17,9 +17,6 @@ contract ReentrancyAttacker {
 
     receive() external payable {
                 
-        ITradingPairExchange(callingContractAddr).mint(address(this));        
-        
-        // if(ITradingPairExchange(callingContractAddr).balanceOf(address(this)) == 0) {      }     
-        
+        ITradingPair(callingContractAddr).mint(address(this));                
     }
 }
