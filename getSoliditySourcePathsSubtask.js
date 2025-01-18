@@ -9,4 +9,4 @@ subtask(
       ...mainContracts,
       ...testContracts
     ]
-  }
+  })
