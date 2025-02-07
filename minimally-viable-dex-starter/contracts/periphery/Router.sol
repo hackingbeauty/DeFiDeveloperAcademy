@@ -83,24 +83,21 @@ contract Router is IRouter {
         }
     }
 
-    // Allows a trader to specify the exact amount of token "As" a trader is willing to input,
-    // and the minimum amount of token "Bs" a trader is willing to receive in return.
     function swapExactTokensForTokens(
         uint amountIn,
         uint amountOutMin,
         address[] calldata path,
         address to,
         uint deadline
-    ) external ensure(deadline) returns (uint[] memory amounts) {         //the various amounts that will be swapped out        
+    ) external ensure(deadline) returns (uint[] memory amounts) {
         // Add logic
     }
 
-    function swapExactETHForTokens(uint amountOutMin, address[] calldata path, address to, uint deadline) 
-        external
-        payable
-        ensure(deadline) 
-        returns (uint[] memory amounts)
-    {
+    function swapExactETHForTokens(uint amountOutMin,
+        address[] calldata path,
+        address to,
+        uint deadline
+    ) external payable ensure(deadline) returns (uint[] memory amounts) {
         // Add logic
     }
 
