@@ -1,0 +1,15 @@
+:local(.styles) {
+  .label {
+    color: $secondaryGrey;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 500;
+  }
+
+  .value {
+    font-size: 16px;
+    line-height: 21px;
+    color: $primaryFontColor;
+    margin-top: 4px;
+  }
+}

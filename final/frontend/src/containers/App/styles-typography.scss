@@ -1,0 +1,44 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 300;
+  margin: 0;
+}
+
+p,
+span {
+  font-size: 16px;
+  font-family: 'Avenir-Next-Regular';
+  line-height: 1.5;
+}
+
+strong {
+  font-family: 'Avenir-Next-Bold';
+}
+
+@font-face {
+  font-family: 'Avenir-Next-Regular';
+  src: url('assets/fonts/AvenirNextLTPro-Regular.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avenir-Next-Bold';
+  src: url('assets/fonts/AvenirNextLTPro-Bold.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+h2 {
+  font-size: 48px;
+  font-family: 'Avenir-Next-Bold';
+}

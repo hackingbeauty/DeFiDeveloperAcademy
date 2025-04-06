@@ -1,0 +1,39 @@
+:local(.styles) {
+  display: inline-block;
+
+  .tab {
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: normal;
+    position: relative;
+    width: 190px;
+    height: inherit;
+    cursor: pointer;
+  }
+
+  .tab-wrapper {
+    display: block;
+    color: $primaryFontColor;
+
+    .icon,
+    .label {
+      float: left;
+    }
+
+    .icon {
+      margin-right: 10px;
+      margin-top: 2px;
+    }
+
+    .label {
+      display: block;
+      margin-top: 4px;
+
+    }
+  }
+
+  .tab-selected {
+    font-weight: bold;
+  }
+
+}

@@ -1,0 +1,60 @@
+@import './styles/third-party/normalize';
+@import '../../configs/theme/config-styles';
+@import './styles-typography';
+@import './styles-animations';
+
+/****************** global styles go here ******************/
+:global(body) {
+  background: $theme1;
+  color: $primaryFontColor;
+  font-family: 'Avenir-Next-Regular';
+
+  body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+  }
+  
+  .container {
+    max-width: 1300px;
+    padding: 20px;
+    margin: 0 auto;
+  }
+
+  .box {
+    background: $boxContainer;
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: $radius;
+    box-shadow: inset;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    list-style-type: none;
+    list-style-position: outside;
+  }
+
+  strong { font-family: 'Avenir-Next-Bold'; }
+
+  .underline { text-decoration: underline; }
+
+  .hidden { visibility: hidden; }
+
+  /****************** Link Styles ******************/
+
+  a {
+    text-decoration: none;
+    color: $theme1;
+    cursor: point;er
+  
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+}

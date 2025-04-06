@@ -1,0 +1,10 @@
+:local(.styles) {
+  #transaction-loading-indicator {
+    // margin-top: -150px;
+    width: 100%;
+  }
+  #transaction-processing-msg {
+    display: block;
+    text-align: center;
+  }
+}

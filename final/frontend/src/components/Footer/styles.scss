@@ -1,0 +1,21 @@
+:local(.styles) {
+  position: relative;
+  z-index: 1;
+  background: $theme1;
+  height: 200px;
+  width: 100%;
+  padding: 40px 0 0 0;
+  background-color: #202020;
+
+  img {
+    float: left;
+    margin-right: 20px;
+  }
+
+  p {
+    color: $white;
+    font-size: 28px;
+    padding: 0 20px;
+  }
+
+}

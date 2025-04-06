@@ -1,0 +1,26 @@
+:local(.styles) {
+  h3 {
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .section {
+    margin-bottom: 20px;
+  }
+
+  #deposit-liquidity-form {
+    padding-top: 20px;
+  }
+
+  .menu-item {
+    width: 200px;
+    float: left;
+    text-align: left;
+
+    img, span {
+      display: inline;
+      vertical-align: middle;
+    }
+    
+  }
+}

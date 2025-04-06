@@ -1,0 +1,31 @@
+:local(.styles) {
+
+  .drawer-container {
+    background: red !important;
+  }
+
+  .drawer-paper {
+    margin-top: 73px;
+    width: 530px;
+    z-index: 0;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    overflow: hidden;
+    height: 93%;
+
+    .drawer-container {
+      padding: 50px;
+      min-height: 100%;
+    }
+  }  
+
+  @media (max-width: 900px) {
+    .drawer-paper {
+      width: 100%;
+      position: static;
+      border: 1px solid $standardBorderColor;
+      border-radius: $radius;
+    }
+  }
+}

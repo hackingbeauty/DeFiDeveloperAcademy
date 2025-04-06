@@ -1,0 +1,65 @@
+:local(.styles) {
+  width: 100%;
+
+  #logo {
+    position: absolute;
+    top: 28px;
+    left: 47px
+  }
+
+  #main-nav {
+    text-align: left;
+    margin-left: 220px;
+
+    .navigation {
+      display: block;
+    }
+  }
+
+  .tab-indicator {
+    display: none;
+  }
+
+  #right-button {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+
+    a:hover {
+      text-decoration: none;
+    }
+ }
+
+  /* responsive mobile header styles */
+  @media (max-width: 1300px) {
+    #main-nav {
+      margin-left: 180px;
+    }
+
+  }
+  
+  /* responsive mobile header styles */
+  @media (max-width: 1250px) {
+    #main-nav {
+      display: none;
+      margin-left: 0px;
+      box-shadow: $standardShadow;
+      padding: 20px 20px 40px 20px;
+      border-bottom-left-radius: $radius;
+      border-bottom-right-radius: $radius;
+      position: absolute;
+      width: 100%;
+      top: 70px;
+      left: 0;
+
+      &.show {
+        display: block;
+      }
+    }
+
+    #right-button {
+      position: initial;
+      margin-top: 15px;
+    }
+  }
+}

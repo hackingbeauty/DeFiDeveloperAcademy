@@ -1,0 +1,20 @@
+:local(.styles) {
+    img { 
+        margin-right: 20px; 
+    }
+
+    .down-arrow-icon {
+        margin-left: 10px;
+    }
+
+    button {
+        color: $white;
+        text-transform: capitalize;
+        white-space: nowrap;
+        padding: 10px;
+        border-radius:40px;
+        color: $primaryFontColor;
+        background: #333333;
+        font-weight: bold;
+    }
+}

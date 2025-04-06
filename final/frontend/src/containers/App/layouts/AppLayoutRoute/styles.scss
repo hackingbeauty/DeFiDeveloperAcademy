@@ -1,0 +1,30 @@
+:local(.styles) {
+  display: flex;
+  flex-direction: column;
+
+  .app-shell {
+    width: 100%;
+    margin-top: 120px;
+  }
+
+  .app-bar,
+  #main-nav {
+    color: $primaryFontColor;
+  }
+
+  #burger {
+    color: $primaryFontColor;
+  }
+
+  @media (max-width: 1300px) {
+    .app-shell {
+      margin-top: 90px;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .app-shell {
+      margin-top: 0px;
+    }
+  }
+}

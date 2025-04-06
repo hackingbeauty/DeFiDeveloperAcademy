@@ -1,0 +1,14 @@
+:local(.styles) {
+    .wallet-selector {
+        width: 500px;
+        text-align: center;
+        line-height: 50px;
+    }
+    .btn-label {
+        img {
+            margin-right: 15px;
+            position: relative;
+            top: 2px;
+        }
+    }
+}

@@ -1,0 +1,71 @@
+@keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes rotateMenu {
+    0% {
+      transform: rotateX(-90deg)
+    }
+    70% {
+      transform: rotateX(20deg)
+    }
+    100% {
+      transform: rotateX(0deg)
+    }
+  }
+  
+  @keyframes growDown {
+    0% {
+        transform: scaleY(0)
+    }
+    80% {
+        transform: scaleY(1.1)
+    }
+    100% {
+        transform: scaleY(1)
+    }
+  }
+  
+  .dropdown-menu-animation1 {
+    animation: rotateMenu 200ms ease-in-out forwards;
+  }
+  
+  .dropdown-menu-animation2 {
+    animation: growDown 200ms ease-in-out forwards;
+    transform-origin: top center;
+  }
+  
+  @keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  .fade-in {
+    animation: fadeIn 1.5s;
+    -webkit-animation: fadeIn 1.5s;
+    -moz-animation: fadeIn 1.5s;
+    -o-animation: fadeIn 1.5s;
+    -ms-animation: fadeIn 1.5s;
+  }

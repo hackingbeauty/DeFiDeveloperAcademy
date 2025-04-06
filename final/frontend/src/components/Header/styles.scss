@@ -1,0 +1,64 @@
+:local(.styles) {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 1;
+
+  .app-bar {
+    height: 73px;
+    background: $theme1;
+    &.is-mainnet {
+      background: $theme1;
+    }
+
+    // .btn {
+    //   background: #eb58a2 !important;
+    //   color: white;
+    // }
+  }
+
+  .dropdown {
+    position: absolute;
+    top: 7px;
+    right: 0px;
+    z-index: 2;
+    background: $white;
+    width: 20px;
+    height: 20px;
+  }
+
+  #main-logo {
+    position: absolute;
+    left: 20px;
+    top: 24px;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  #burger {
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 12px;
+  }
+
+  .progress-indicator {
+    width: 100%;
+  }
+
+  /* responsive mobile header styles */
+  @media (max-width: 1250px) {
+    #burger {
+      display: block;
+    }
+
+    .dropdown {
+      display: none;
+    }
+
+  }
+}
+
+:local(.menuStyles) {
+  z-index: 1;
+}

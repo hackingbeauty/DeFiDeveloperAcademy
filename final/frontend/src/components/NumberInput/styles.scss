@@ -1,0 +1,23 @@
+:local(.styles) {
+  .input-error {
+    border: 1px solid $red !important;
+    display: inline-block;
+    width: 100%;
+    border-radius: $radius;
+  }
+
+  .msg {
+    position: absolute;
+    font-size: 15px;
+    top: 70px;
+    left: 5px
+  }
+
+  .msg.error {
+    color: $red;
+  }
+
+  .msg.warning {
+    color: $warning;
+  }
+}

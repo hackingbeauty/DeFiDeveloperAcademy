@@ -1,0 +1,40 @@
+:local(.styles) {
+  height: 100%;
+  width: 100%;
+
+  .progress-indicator {
+    width: inherit;
+    margin: 0 auto;
+
+    .progress-indicator-circular {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .color-circular-primary {
+    color: $primary;
+  }
+
+  .color-circular-secondary {
+    color: $aqua;
+  }
+
+  .color-primary {
+    background-color: $primary;
+  }
+
+  .bar-color-primary {
+    background-color: $aqua;
+  }
+
+  .color-secondary {
+    background-color: $theme1;
+    color: $aqua;
+  }
+
+  .bar-color-secondary {
+    background-color: $aqua;
+  }
+}

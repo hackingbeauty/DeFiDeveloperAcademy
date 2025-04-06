@@ -1,0 +1,42 @@
+:local(.styles) {
+
+  .btn {
+    white-space: nowrap;
+    padding: 20px;
+    border-radius:40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $primaryFontColor;
+    background: #eb58a2;
+
+    &:hover {
+      background: #ff80bf;
+    }
+
+    .btn-label {
+      text-transform: initial;
+      display: block;
+      white-space: normal;
+
+      &::first-letter {
+        text-transform: uppercase;
+      }
+
+      strong::first-letter {
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .outline {
+    background: $lightGrey;
+    border: 1px solid $aqua;
+    color: $aqua;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+}
